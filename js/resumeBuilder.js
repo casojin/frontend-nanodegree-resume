@@ -30,13 +30,16 @@ var bio = {
 	};
 
 var formattedBio = [];
+
 formattedBio.push(HTMLheaderName.replace("%data%",bio.name));
-formattedBio[1]=HTMLheaderRole.replace("%data%",bio.role);
-formattedBio[2]=HTMLmobile.replace("%data%",bio.contacts.mobile);
-formattedBio[3]=HTMLemail.replace("%data%",bio.contacts.email);
-formattedBio[4]=HTMLlocation.replace("%data%",bio.contacts.location);
-formattedBio[5]=HTMLskills.replace("%data%",bio.skills);
-formattedBio[6]=HTMLbioPic.replace("%data%",bio.photo);
+formattedBio.push(HTMLheaderRole.replace("%data%",bio.role));
+formattedBio.push(HTMLwelcomeMsg.replace("%data%",bio.welcome));
+formattedBio.push(HTMLmobile.replace("%data%",bio.contacts.mobile));
+formattedBio.push(HTMLemail.replace("%data%",bio.contacts.email));
+formattedBio.push(HTMLlocation.replace("%data%",bio.contacts.location));
+formattedBio.push(HTMLskillsStart);
+formattedBio.push(HTMLskills.replace("%data%",bio.skills));
+formattedBio.push(HTMLbioPic.replace("%data%",bio.photo));
 
 for (i=formattedBio.length; i>-1;i--) {
 //for (i=0; i<formattedBio.length;i++) {
