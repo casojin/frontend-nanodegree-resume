@@ -22,13 +22,66 @@ var bio = {
 	"contacts" : {
 		"mobile" : "0895280081",
 		"email" : "kongler@hotmail.com",
-		"location" : "Calth"
+		"location" : "Hive City of Bangkok"
 		},
 	"photo" : "images/me.jpg",
 	"skills" : mySkills,
 	"welcome" : "Courage and Honour!"
 	};
 
+var education = {
+	"schools": [
+			{
+			"name": "Saint Dominic",
+			"type": "Primary School"
+			},
+			{
+			"name": "Bodindecha",
+			"type": "High School"
+			},
+			{
+			"name": "Chulalongkorn University",
+			"type": "Bachlor Degree",
+			"faculty": "Engineering",
+			"major": "Survey Engineer"
+			}
+		]
+	};
+	
+var work = {
+	"jobs":
+	[	{
+		"name" : "PTTEP",
+		"title": "Data Management"
+		},
+		{
+		"name" : "Aomkod",
+		"title": "Fianancial Supporter"
+		}
+	]
+	};
+
+	
+var project = {
+		"assignment" :[
+				{
+				"name": "GIS Portal"
+				},
+				{
+				"name": "Exploration Insight"
+				},
+				{
+				"name": "Geodetic database"
+				}
+			]
+	};
+	
+	
+	
+	
+	
+	
+/*
 var formattedBio = [];
 
 formattedBio.push(HTMLheaderName.replace("%data%",bio.name));
@@ -37,14 +90,17 @@ formattedBio.push(HTMLwelcomeMsg.replace("%data%",bio.welcome));
 formattedBio.push(HTMLmobile.replace("%data%",bio.contacts.mobile));
 formattedBio.push(HTMLemail.replace("%data%",bio.contacts.email));
 formattedBio.push(HTMLlocation.replace("%data%",bio.contacts.location));
+formattedBio.push(HTMLbioPic.replace("%data%",bio.photo));
 formattedBio.push(HTMLskillsStart);
 formattedBio.push(HTMLskills.replace("%data%",bio.skills));
-formattedBio.push(HTMLbioPic.replace("%data%",bio.photo));
+
 
 for (i=formattedBio.length; i>-1;i--) {
 //for (i=0; i<formattedBio.length;i++) {
 	$("#header").prepend(formattedBio[i]);
 };
+
+*/
 
 // $("#header").prepend(formattedRole);
 // $("#header").prepend(formattedName);
