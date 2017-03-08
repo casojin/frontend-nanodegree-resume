@@ -51,12 +51,16 @@ var education = {
 var work = {
 	"jobs":
 	[	{
-		"name" : "PTTEP",
-		"title": "Data Management"
+		"employer" : "PTTEP",
+		"title"    : "Data Management",
+		"date"     : "2008-present",
+		"location" : "Bangkok"
 		},
 		{
-		"name" : "Aomkod",
-		"title": "Fianancial Supporter"
+		"employer" : "Aomkod",
+		"title"    : "Fianancial Supporter",
+		"date"     : "2016-present",
+		"location" : "Anywhere with internet"
 		}
 	]
 	};
@@ -81,7 +85,7 @@ var project = {
 	
 	
 	
-/*
+
 var formattedBio = [];
 
 formattedBio.push(HTMLheaderName.replace("%data%",bio.name));
@@ -91,16 +95,33 @@ formattedBio.push(HTMLmobile.replace("%data%",bio.contacts.mobile));
 formattedBio.push(HTMLemail.replace("%data%",bio.contacts.email));
 formattedBio.push(HTMLlocation.replace("%data%",bio.contacts.location));
 formattedBio.push(HTMLbioPic.replace("%data%",bio.photo));
-formattedBio.push(HTMLskillsStart);
-formattedBio.push(HTMLskills.replace("%data%",bio.skills));
 
 
-for (i=formattedBio.length; i>-1;i--) {
+
+for (i=formattedBio.length; i>=0;i--) {
 //for (i=0; i<formattedBio.length;i++) {
 	$("#header").prepend(formattedBio[i]);
 };
 
-*/
+if (bio.skills.length > 0){
+	$("#header").append(HTMLskillsStart);
+	
+	var formattedSkills="";
+	
+	for (i=0; i<bio.skills.length;i++){
+		formattedSkill=HTMLskills.replace("%data%",bio.skills[i]);
+		$("#skills").append(formattedSkill);
+	};
+};
+
+
+for (item in work.jobs){
+	$("#workExperience").append(HTMLworkStart);
+	var formattedEmployer=HTMLworkEmployer.replace("%data%",work.jobs[item].employer);
+	var formattedTitle=HTMLworkTitle.replace("%data%",work.jobs[item].title);
+	var formattedEmployerTitle=formattedEmployer+formattedTitle;
+	$(".work-entry:last").append(formattedEmployerTitle);
+};
 
 // $("#header").prepend(formattedRole);
 // $("#header").prepend(formattedName);
